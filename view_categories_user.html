@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Categories</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>View Categories</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category[0] }}</td>
+            <td>{{ category[1] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><a href='/user_dashboard'>User_Dashboard</a></p>
+</body>
+</html>

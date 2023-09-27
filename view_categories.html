@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Categories</title>
+</head>
+<body>
+    <h1>View Categories</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category[0] }}</td>
+            <td>{{ category[1] }}</td>
+            <td><a href="/delete_category/{{ category[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/add_category">Add Category</a></p>
+    <p><a href="/view_items">view_items</a></p>
+<p><a href='/manager_dashboard'>manager_homepage</a></p>
+</body>
+</html>

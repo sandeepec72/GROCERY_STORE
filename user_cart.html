@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <!-- Example template code to display the cart items and total cost -->
+<table>
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Expiry Date</th>
+            <th>Rate Per Unit</th>
+            <th>Total Quantity</th>
+            <th>Item Total Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[4] }}</td>
+            <td>{{ item[5] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4"><strong>Total Cost:</strong></td>
+            <td>{{ total_cost }}</td>
+        </tr>
+    </tbody>
+</table>
+<p><a href="/user_cart">user cart</a></p>
+    <p><a href="/">Home</a></p>
+</body>
+</html>

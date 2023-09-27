@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Items</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>View Items</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Expiry Date</th>
+            <th>Rate Per Unit</th>
+            <th>quantity_available</th>
+            <th>Category ID</th>
+            <th>Action</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[4] }}</td>
+            <td>{{ item[5] }}</td>
+            <td><a href="/delete_item/{{ item[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/add_item">add_item</a></p>
+    <p><a href="/view_items">view_item</a></p>
+
+    <p><a href="/manager_dashboard">Back to Home</a></p>
+</body>
+</html>

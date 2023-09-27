@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add Category</h1>
+    <form method="POST" action="/add_category">
+        <label for="category_name">Category Name:</label>
+        <input type="text" id="category_name" name="category_name" required><br><br>
+        <input type="submit" value="Add Category">
+    </form>
+    <p><a href="/manager_dashboard">Back to Manager Dashboard</a></p>
+</body>
+</html>

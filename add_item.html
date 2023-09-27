@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Add Item</h1>
+    <form action="/add_item" method="post">
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" required><br>
+
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="text" id="expiry_date" name="expiry_date"><br>
+
+        <label for="rate_per_unit">Rate Per Unit:</label>
+        <input type="number" step="0.01" id="rate_per_unit" name="rate_per_unit"><br>
+
+        <label for="quantity_available">quantity_available:</label>
+        <input type="number" step="1" id="quantity_available" name="quantity_available"><br>
+
+        <label for="category_id">Category:</label>
+        <select id="category_id" name="category_id">
+            {% for category in categories %}
+                <option value="{{ category[0] }}">{{ category[1] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Add Item</button>
+    </form>
+    <p><a href="/view_categories">View Items</a></p>
+</body>
+</html>

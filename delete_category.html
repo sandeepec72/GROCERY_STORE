@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Delete Category</h1>
+    <p>Are you sure you want to delete this category?</p>
+    <form action="/delete_category/{{ category_id }}" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    <p><a href="/view_categories">Cancel</a></p>
+</body>
+</html>

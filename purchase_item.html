@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Confirm Purchase</h2>
+  <p><strong>Item Name:</strong> {{ item[1] }}</p>
+  <p><strong>Expiry Date:</strong> {{ item[2] }}</p>
+  <p><strong>Rate per Unit:</strong> {{ item[3] }}</p>
+  <p><strong>Quantity Available:</strong> {{ item[4] }}</p>
+
+  <form method="post">
+    <button type="submit">Confirm Purchase</button>
+  </form>
+{% endblock %}

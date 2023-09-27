@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+    <body>
+        <h1>Manager Dashboard</h1>
+<h1>Create Categories Table</h1>
+    <p>Click the button to create the categories table:</p>
+    <form action="/create_categories_table" method="get">
+        <button type="submit">Create Categories Table</button>
+    </form>
+
+        <p><a href="/add_category">add_categories</a></p>
+        <p><a href="/view_categories">view_categories</a></p>
+        <p><a href="/view_items">view_items</a></p>
+        <p><a href="/add_item">add items</a></p>
+
+    <p><a href="/">Home</a></p>
+    </body>
+</html>
